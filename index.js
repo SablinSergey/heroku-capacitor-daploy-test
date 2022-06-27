@@ -15,6 +15,6 @@ http.createServer(function(req, res) {
     var readStream = fileSystem.createReadStream('newStatic.zip');
     readStream.pipe(res);
 
-    console.log('zip file has been sent');
+    console.log('zip file has been sent.');
 })
     .listen(process.env.PORT || 5000);
