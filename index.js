@@ -1,10 +1,9 @@
 var http = require('http'),
     fileSystem = require('fs');
 
-http.createServer(async function(req, res) {
+http.createServer(function(req, res) {
     console.log('New query received.')
 
-    await createZipArchive();
     var stat = fileSystem.statSync('newStatic.zip');
 
     res.writeHead(200, {
